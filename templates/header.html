@@ -1,0 +1,15 @@
+<div class="top-bar row">
+   <div class="col-md-8 header-left">
+      <h1>Catalog App</h1>
+   </div>
+   <div class="col-md-4 header-right">
+      {%if 'username' not in session %}
+      <a href="{{url_for('showLogin')}}">
+      <button class="btn1">Login</button>
+      </a>
+      {% else %}
+      <a href="{{url_for('disconnect')}}">
+      <button class="btn1">Logout</button> </a>
+      {% endif %}
+   </div>
+</div>

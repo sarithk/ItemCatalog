@@ -1,0 +1,106 @@
+/*
+Item Catalog Project
+*/
+* {
+    font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+body{
+    background-color: #D3D3D3;
+}
+
+.header-left{
+    padding-left: 8%;
+}
+
+.header-right{
+    text-align : center;
+}
+
+.main{
+background-color: #FFFFFF;
+
+}
+.btn1 {
+    background-color: #FF5733;
+    color: white;
+    width: 25%;
+    font-weight: 100;
+    margin-top: 5%;
+}
+
+.top-bar {
+    background-color: #000080;
+    color: #FFFFFF;
+}
+
+.padding-top {
+    padding-top: 10px;
+}
+.padding-bottom {
+    padding-bottom: 30px;
+}
+
+.latest-border{
+    border-left: solid;
+    border-color: #D3D3D3;
+
+}
+.category-list {
+    color: #FF5733;
+}
+
+
+.latest-category{
+    font-style: italic;
+    color: #D3D3D3;
+}
+
+.description-header{
+        color: #000080;
+}
+
+.description-text{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.link-separator{
+    border-right: solid 1px;
+    color:#000080;
+}
+
+.form-fields{
+    margin-top: 20px;
+    white-space: pre;
+}
+
+.btn {
+    color: gray;
+}
+
+.creator {
+    padding-right: 20px;
+    margin-top: -20px;
+    text-align: right;
+    float:right;
+}
+
+.creator img {
+    width: 100px;
+    border-radius: 50%;
+}
+.creator figcaption {
+    font-size: 14px;
+    color: #7B7573;
+    font-weight: 400;
+    text-align: center;
+    color: #000080;
+}
+
+.item{
+    background-color: green;
+}
+
+

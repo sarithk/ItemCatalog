@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% include "header.html" %}
+{% block content %}
+<div class="row padding-top">
+<div class="col-md-12 main">
+   <h3 class="description-header">Add Item</h3>
+   <div class="col-md-4">
+      <form action="#" method = "post" >
+         <div class="form-group">
+            <label class="form-fields has-danger" for="itemTitle">Title</label>
+            <input required type ="text" maxlength="50" class="form-control" name="itemTitle" placeholder="Enter Item Name">
+            <label class="form-fields" for="description">Description</label>
+            <textarea required class="form-control" maxlength="500" rows="3" name="description" placeholder="Enter Item Description"></textarea>
+            <label class="form-fields" for="category">Category</label>
+            <select required class="form-control" name="category" id="category">
+               {% for category in categories %}
+               <option>{{category.name}}</option>
+               {% endfor %}
+            </select>
+            <button class="btn btn-default form-fields" name="submit" value="1">Submit</button>
+            <a href = "{{url_for('showCatalog')}}">
+            <button type="button" class="btn btn-default form-fields" name="cancel">Cancel</button>
+            </a>
+      </form>
+      </div>
+   </div>
+</div>
+{% endblock %}

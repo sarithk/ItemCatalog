@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% include "header.html" %}
+{% block content %}
+<div class="row padding-top">
+<div class="col-md-12 main">
+   <h3 class="description-header">Add a Category</h3>
+   <div class="col-md-4">
+      <form action="#" method = "post">
+         <div class="form-group">
+            <label class="form-fields has-danger" for="catTitle">Name</label>
+            <input required type ="text" maxlength="250" class="form-control" name="catTitle" placeholder="Enter Category Name">
+            <button class="btn btn-default form-fields" name="submit" value="1">Submit</button>
+            <a href = "{{url_for('showCatalog')}}">
+            <button type="button" class="btn btn-default form-fields" name="cancel">Cancel</button>
+            </a>
+      </form>
+      </div>
+   </div>
+</div>
+{% endblock %}

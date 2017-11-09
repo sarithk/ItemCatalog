@@ -1,0 +1,37 @@
+{% extends "loggedin_allItems.html" %}
+{% block content %}
+{{ super() }}
+<div class="col-md-8 latest-border main" id="latestsection">
+   {% if items %}
+   <h3 class="description-header">{{items[0].category.name}}({{length}} items)</h3>
+   {% for item in items %}
+   <a href = "{{url_for('showCatalogItemDetail', category= item.category.name, itemName = item.name)}}">
+      <div class="row">
+         <div class="col-md-12 category-list">
+            <h4>{{item.name}}</h4>
+         </div>
+      </div>
+   </a>
+   {% endfor %}
+</div>
+{% else %}
+<a href="{{url_for('newCatalogItem')}}" class="category-list">
+Add Item
+</a>
+<span class="description-text">|</span>
+<a href="{{url_for('newCategory')}}" class="category-list">
+Add Category
+</a>
+<h3>Latest Items</h3>
+{% for latestItem in latest %}
+<a href = "{{url_for('showCatalogItemDetail', category= latestItem.category.name, itemName = latestItem.name)}}">
+   <div class="row">
+      <div class="col-md-12 category-list">
+         <h4>{{latestItem.name}}<span class="latest-category">({{latestItem.category.name}})</span></h4>
+      </div>
+   </div>
+</a>
+{% endfor %}
+</div>
+{%endif%}
+{% endblock %}

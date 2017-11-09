@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% include "header.html" %}
+{% block content %}
+<div class="row banner padding-top">
+   <div class="col-md-11 main">
+      <h3 class="description-header">
+         {{item.name}}
+         <figure class="creator">
+            {% if creator.picture %}
+            <img src="{{ creator.picture}}" alt="Creator Picture">
+            {% else %}
+            <img src="{{ url_for('static', filename='blank_user.gif') }}" alt="Creator Picture">
+            {% endif %}
+            <figcaption>{{item.user.name}}</figcaption>
+         </figure>
+      </h3>
+      <p class="description-text">Description: {{description}}</p>
+   </div>
+</div>
+{% endblock%}

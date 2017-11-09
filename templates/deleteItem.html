@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class = "row padding-top">
+   <div class="col-md-12 main">
+      <h3 class="description-header">Delete Item</h3>
+      <p class="description-text">Are you sure you want to delete {{item.name}}?</p>
+      <form class=" padding-bottom" action="#" method = 'post'>
+         <button type="submit" class="btn btn-default form-fields" id="delete" name="delete" value="1">Delete</button>
+         <a href = "{{url_for('showCatalog')}}">
+         <button type="button" class="btn btn-default form-fields" name="cancel">Cancel</button>
+         </a>
+      </form>
+   </div>
+</div>
+{% endblock %}
