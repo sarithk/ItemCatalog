@@ -1,5 +1,5 @@
 # Item Catalog
-A RESTful web application that provides a catalog of items list as well as provide a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items. The app also has JSON endpoints that serve the item information.
+A RESTful web application that provides a catalog of items as well as a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items. The app also has JSON endpoints that serve the item information.
 
 This application interacts with a sqlite database using SQLAlchemy, an Object-Relational Mapping (ORM) layer. The CRUD (create, read, update and delete) operations and web page templates are handled using Python Flask framework. OAuth 2.0 framework allows users to securely login to the application using Google+ Sign-In or Facebook Login so users can create items that are viewable by everyone but only modifiable by the original creator.
 
